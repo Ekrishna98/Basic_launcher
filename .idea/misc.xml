@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/drawable/home.xml" value="0.185" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/drawable/home_button.xml" value="0.1615" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout-land/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout-land/activity_settings_list.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout-sw600dp-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout-sw600dp-v31/activity_main.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout-sw600dp/activity_settings_list.xml" value="0.1" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/activity_firebae.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/activity_firebase.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/activity_navigation_button.xml" value="0.11" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/activity_settings.xml" value="0.1" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/activity_settings_list.xml" value="0.22" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/fragment_dashboard.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/menu/home_icon.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/user02/AndroidStudioProjects/Basic_launcher/app/src/main/res/menu/home_menu.xml" value="0.10208333333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

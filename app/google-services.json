@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "552236816619",
+    "project_id": "basic-launcher",
+    "storage_bucket": "basic-launcher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552236816619:android:4a8d99d4528f4b699646ae",
+        "android_client_info": {
+          "package_name": "com.example.basic_launcher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552236816619-jo4np9j8g9d1hlcn3cr04mtd3eojceg1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvYOxiOU4YH430G-mbnQ73uiYs8ve2zhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552236816619-jo4np9j8g9d1hlcn3cr04mtd3eojceg1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
