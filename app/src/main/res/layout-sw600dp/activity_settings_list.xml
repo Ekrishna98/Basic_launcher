@@ -24,7 +24,7 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/TvWifi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -43,7 +43,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/Bluetooth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Bluetooth"
