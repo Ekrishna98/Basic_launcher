@@ -10,12 +10,24 @@
     <Switch
         android:id="@+id/wifiSwitch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:layout_height="50dp"
         android:background="#8E8D8D"
+        android:paddingLeft="80dp"
         android:text="UseWifi"
         android:textSize="18dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/wifiSwitch"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="228dp"
+        android:text="To see available networks,Turn Wi-fi On"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"/>
 
 
 </RelativeLayout>

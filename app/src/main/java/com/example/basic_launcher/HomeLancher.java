@@ -1,8 +1,5 @@
 package com.example.basic_launcher;
 
-import static android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
-import static android.view.View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.utils.widget.ImageFilterView;
@@ -14,21 +11,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
-public class MainActivity extends AppCompatActivity {
+public class HomeLancher extends AppCompatActivity {
     public TextView etdate;
     public TextView txtCurrentTime;
     private ActionBar actionBar;
@@ -52,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Settings_List.class));
+                startActivity(new Intent(HomeLancher.this,Settings_List.class));
             }
         });
 
@@ -76,21 +66,46 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home_menu:
-                        Toast.makeText(MainActivity.this, "home click", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HomeLancher.this, "home click", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.backBtn:
-                        AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle("Really Exit?")
-                                .setMessage("Are you sure?..")
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        MainActivity.super.onBackPressed();
-                                    }
-                                })
-                                .setNegativeButton("cancel",null);
-                        AlertDialog alert = builder.create();
-                        alert.show();
+                        final AlertDialog.Builder alert = new AlertDialog.Builder(HomeLancher.this);
+                        View mview = getLayoutInflater().inflate(R.layout.alertbox,null);
+
+                       EditText enterpass = mview.findViewById(R.id.AlertPassword);
+                       Button cancel = mview.findViewById(R.id.Alert_Cancel);
+                       Button ok = mview.findViewById(R.id.Alert_ok);
+
+                        alert.setView(mview);
+
+                        final AlertDialog alertDialog = alert.create();
+                        alertDialog.setCanceledOnTouchOutside(false);
+
+                        cancel.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                alertDialog.dismiss();
+                                alertDialog.cancel();
+                            }
+                        });
+                        ok.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                String Password = "12345";
+                                String PassCheck = enterpass.getText().toString();
+
+                                if (PassCheck.matches(Password)) {
+//                                    startActivity(new Intent(HomeLancher.this, HomeLancher.class));
+                                    finish();
+                                    System.exit(0);
+                                } else {
+                                    Toast.makeText(HomeLancher.this, "Enter Wrong Password..", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+
+                        });
+                        alertDialog.show();
 
                        // Toast.makeText(MainActivity.this, "back click", Toast.LENGTH_SHORT).show();
                         break;
