@@ -2,11 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.basic_launcher">
 
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/launcher"
@@ -16,9 +18,7 @@
         android:theme="@style/Theme.Basic_launcher">
         <activity
             android:name=".Wifi_Settings"
-
-            android:exported="false"/> >
-
+            android:exported="false"/>
         <activity
             android:name=".Settings_List"
             android:exported="false" />
@@ -30,10 +30,6 @@
         <!-- </intent-filter> -->
         <!-- </activity> -->
         <activity
-            android:name=".navigation_button"
-            android:exported="false"
-            android:label="@string/title_activity_navigation_button" />
-        <activity
             android:name=".HomeLancher"
             android:clearTaskOnLaunch="true"
             android:exported="true"
@@ -42,7 +38,6 @@
             android:theme="@style/AppTheme.Wallpaper">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />

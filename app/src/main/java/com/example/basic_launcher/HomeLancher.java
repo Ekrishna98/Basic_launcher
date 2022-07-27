@@ -1,16 +1,27 @@
 package com.example.basic_launcher;
 
+import static android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.utils.widget.ImageFilterView;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.app.ActionBar;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.PixelFormat;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,21 +29,20 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
+
 public class HomeLancher extends AppCompatActivity {
     public TextView etdate;
     public TextView txtCurrentTime;
     private ActionBar actionBar;
     private ImageFilterView iv;
-
-
-    // FirebaseFirestore firestore;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         iv = findViewById(R.id.imageFilterView);
+
         BottomNavigationView btn = findViewById(R.id.BtnNavi_View);
        // BottomNavigationView btnnavi_View = (BottomNavigationView) findViewById(R.id.BtnNavi_View);
        // btn.setBackground(null);
@@ -45,20 +55,6 @@ public class HomeLancher extends AppCompatActivity {
                 startActivity(new Intent(HomeLancher.this,Settings_List.class));
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         btn.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
@@ -119,28 +115,12 @@ public class HomeLancher extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         View windowDecorView = getWindow().getDecorView();
         windowDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
 
 //        actionBar=getActionBar();
 //        actionBar.setHomeButtonEnabled(true);
-
-
 
 //        Thread myThread = null;
 //
@@ -165,8 +145,7 @@ public class HomeLancher extends AppCompatActivity {
 //            }
 //        });
 //    }
-//
-//
+
 //    class CountDownRunner implements Runnable{
 //        // @Override
 //        public void run() {
@@ -197,3 +176,5 @@ public class HomeLancher extends AppCompatActivity {
     }
 
 }
+
+
