@@ -36,8 +36,9 @@ public class Wifi_Settings extends AppCompatActivity {
         actionBar.setTitle("Wifi");
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true); }
+         //   actionBar.setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       }
     }
     @Override public boolean onSupportNavigateUp() {
         onBackPressed();

@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout      xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Wifi_Settings">
-
+    tools:context=".Bluetooth_Settings">
 
     <Switch
-        android:id="@+id/wifiSwitch"
+        android:id="@+id/BluetoothSwitch"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#8E8D8D"
         android:paddingLeft="80dp"
-        android:text="UseWifi"
+        android:text="UseBluetooth"
         android:textSize="18dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/BlueText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/wifiSwitch"
+        android:layout_below="@+id/BluetoothSwitch"
         android:layout_centerVertical="true"
         android:layout_marginTop="228dp"
-        android:text="To see available networks \n Turn Wi-fi On"
         android:gravity="center"
+        android:text="To see available networks \n Turn Bluetooth On"
         android:textColor="@color/black"
-        android:textSize="25sp"/>
-
-
+        android:textSize="25sp" />
 </RelativeLayout>

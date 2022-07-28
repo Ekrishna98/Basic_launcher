@@ -26,13 +26,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:layout_marginStart="50dp">
+        android:layout_marginStart="50dp"
+        android:orientation="vertical">
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/imageFilterView"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:srcCompat="@drawable/settings" />
+        <TextView
+            android:id="@+id/tvSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
