@@ -24,11 +24,17 @@
     </style>
 
 
-    <style name="Theme.Basic_launcher." parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="Theme.Basic_launcher." parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#1E1E1E</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">#00838F</item>
         <item name="colorAccent">#DD2F2F</item>
+    </style>
+
+
+    <style name="customTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
 

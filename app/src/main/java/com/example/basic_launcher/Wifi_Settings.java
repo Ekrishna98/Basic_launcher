@@ -12,6 +12,8 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.DigitalClock;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -20,15 +22,29 @@ public class Wifi_Settings extends AppCompatActivity {
 
     Switch wifiSwitch;
     WifiManager wifiManager;
+    ImageView WifiIcon;
+    View include;
+    DigitalClock DTClock;
 
     @Override
+    
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi_settings);
          wifiSwitch = findViewById(R.id.wifiSwitch);
+        WifiIcon = findViewById(R.id.WifiIcon);
+        include =findViewById(R.id.StatusBarWifiSettings);
+        DTClock = findViewById(R.id.DtClock);
 
+        DTClock.setVisibility(View.GONE);
+//       WifiIcon.setVisibility(View.GONE);
          //Calling WifiCheckMethod......
          WifiCheckMethod();
+
+
+        // Hide StatusBar & Navigation Bar..........
+        View windowDecorView = getWindow().getDecorView();
+        windowDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN  | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
 
 //        Back Button in ActionBar
@@ -42,6 +58,7 @@ public class Wifi_Settings extends AppCompatActivity {
     }
     @Override public boolean onSupportNavigateUp() {
         onBackPressed();
+        finish();
         return true; }
 //    End BackButton ActionBar.........
 
@@ -55,9 +72,11 @@ public class Wifi_Settings extends AppCompatActivity {
                 if (isChecked) {
                     wifiManager.setWifiEnabled(true);
                     wifiSwitch.setText("On");
+                  WifiIcon.setVisibility(View.VISIBLE);
                 } else {
                     wifiManager.setWifiEnabled(false);
                     wifiSwitch.setText("Off");
+                  WifiIcon.setVisibility(View.GONE);
                 }
             }
         });
@@ -85,10 +104,12 @@ public class Wifi_Settings extends AppCompatActivity {
                     case WifiManager.WIFI_STATE_ENABLED:
                         wifiSwitch.setChecked(true);
                         wifiSwitch.setText("On");
+                        WifiIcon.setVisibility(View.VISIBLE);
                         break;
                     case WifiManager.WIFI_STATE_DISABLED:
                         wifiSwitch.setChecked(false);
                         wifiSwitch.setText("Off");
+                    WifiIcon.setVisibility(View.GONE);
                         break;
                 }
             }

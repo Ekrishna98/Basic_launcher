@@ -2,31 +2,38 @@ package com.example.basic_launcher;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.TextView;
 
 public class Settings_List extends AppCompatActivity implements View.OnClickListener {
 
-    TextView Wifi, Bluetooth;
+    TextView Wifi,  bluetooth , MoreOption;
+    View include;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_list);
-        Wifi = findViewById(R.id.TvWifi);
-        Bluetooth =findViewById(R.id.TvBluetooth);
+//        include = findViewById(R.id.StatusBarSettingList);
 
+        Wifi = findViewById(R.id.TvWifi);
         Wifi.setOnClickListener(this);
-        Bluetooth.setOnClickListener(this);
+
+        bluetooth= findViewById(R.id.tvBluetooth);
+        bluetooth.setOnClickListener(this);
+
+        MoreOption = findViewById(R.id.tvMore);
+        MoreOption.setOnClickListener(this);
 
         // Hide StatusBar & Navigation Bar..........
         View windowDecorView = getWindow().getDecorView();
-        windowDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-
+        windowDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN  | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
 //        Back Button in ActionBar
         ActionBar actionBar = getSupportActionBar();
@@ -39,6 +46,7 @@ public class Settings_List extends AppCompatActivity implements View.OnClickList
     }
     @Override public boolean onSupportNavigateUp() {
         onBackPressed();
+        finish();
         return true; }
     //    End BackButton ActionBar.........
 
@@ -49,9 +57,11 @@ public class Settings_List extends AppCompatActivity implements View.OnClickList
             case R.id.TvWifi:
                 startActivity(new Intent(Settings_List.this,Wifi_Settings.class));
                 break;
-            case R.id.TvBluetooth:
-                startActivity(new Intent(Settings_List.this,Bluetooth_Settings.class));
+            case R.id.tvBluetooth:
+                startActivity(new Intent(Settings_List.this, Bluetooth_Settings.class));
                 break;
+            case R.id.tvMore:
+                startActivity(new Intent(Settings_List.this, Wireless_And_networks.class));
         }
     }
 }

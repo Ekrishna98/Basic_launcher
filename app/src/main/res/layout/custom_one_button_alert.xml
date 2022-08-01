@@ -1,51 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="15dp"
-    android:background="#ffffff"
-    android:orientation="vertical" >
+    android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/alertTitle"
+        android:id="@+id/AlertTitle_One"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Are you sure ?"
+        android:text="Alert"
         android:textSize="25sp"
         android:gravity="center"
         android:background="#EC407A"
         android:textColor="@color/white"/>
 
-    <EditText
-        android:id="@+id/AlertPassword"
+    <TextView
+        android:id="@+id/Alert_message_One"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:textColor="@color/black"
+        android:text="adnkdnknnncowironcnsvbunfubnifvnkjnhdbclieiluviulvilivbiuviidfncoianivivbinanoi"
         android:textSize="25sp"
-        android:hint="Enter Password :"
-        android:layout_marginTop="20dp"
-        android:inputType="textPassword" />
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp">
 
-
         <Button
-            android:id="@+id/Alert_Cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="Cancel"
-            android:background="#EC407A"
-            android:layout_marginRight="10dp"
-            android:textColor="@color/white"/>
-
-        <Button
-            android:id="@+id/Alert_ok"
+            android:id="@+id/Alert_ok_One"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -58,5 +45,3 @@
 
 
 </LinearLayout>
-
-
