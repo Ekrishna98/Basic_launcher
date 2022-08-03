@@ -8,13 +8,27 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <include
         android:id="@+id/StatusBarSettingList"
         layout="@layout/status_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/ToolBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/StatusBarSettingList"
+                android:background="#3F51B5"
+                app:title="Use Wifi"
+                app:titleTextColor="@color/white"
+                />
 
-    <LinearLayout
+
+            <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -63,5 +77,6 @@
             android:padding="8dp"/>
 
     </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
 </ScrollView>

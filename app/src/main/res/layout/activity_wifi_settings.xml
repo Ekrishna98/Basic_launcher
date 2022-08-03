@@ -19,6 +19,7 @@
         android:layout_below="@id/StatusBarWifiSettings"
         android:background="#8E8D8D"
         android:paddingLeft="80dp"
+        android:paddingEnd="80dp"
         android:text="UseWifi"
         android:textSize="18dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />

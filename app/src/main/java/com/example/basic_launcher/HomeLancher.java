@@ -21,15 +21,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeLancher extends AppCompatActivity implements View.OnClickListener {
     public TextView etdate, TvSettings;
     public TextView txtCurrentTime;
-    private ActionBar actionBar;
     private ImageFilterView iv;
     ImageView WifiIcon;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class HomeLancher extends AppCompatActivity implements View.OnClickListen
         iv = findViewById(R.id.imageFilterView);
         TvSettings = findViewById(R.id.tvSetting);
         WifiIcon = findViewById(R.id.WifiIcon);
-        WifiIcon.setVisibility(View.INVISIBLE);
+        WifiIcon.setVisibility(View.GONE);
 
         iv.setOnClickListener(this);
         TvSettings.setOnClickListener(this);
@@ -46,50 +47,7 @@ public class HomeLancher extends AppCompatActivity implements View.OnClickListen
         // Calling NavigationBottons
         BottomNavigationViewMethod();
 
-        // Hide StatusBar & Navigation Bar..........
-        // View windowDecorView = getWindow().getDecorView();
-        // windowDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
-//        Thread myThread = null;
-//        Runnable runnable = new CountDownRunner();
-//        myThread= new Thread(runnable);
-//        myThread.start();
-//    }
-//    class CountDownRunner implements Runnable{
-//        // @Override
-//        public void run() {
-//            while (!Thread.currentThread().isInterrupted()) {
-//                try {
-//                    doWork();
-//                    Thread.sleep(1000);
-//                } catch(InterruptedException e) {
-//                    Thread.currentThread().interrupt();
-//                } catch(Exception e) {
-//                }
-//            }
-//        }
-//    public void doWork() {
-//        runOnUiThread(new Runnable() {
-//            public void run() {
-//                try{
-//                    TextView txtCurrentTime= (TextView)findViewById(R.id.DtClock);
-//                    Date dt = new Date();
-//                    int hours = dt.getHours();
-//                    int minutes = dt.getMinutes();
-//                    int seconds = dt.getSeconds();
-//                    String curTime = hours + ":" + minutes + ":" + seconds;
-//                    txtCurrentTime.setText(curTime);
-//                }catch (Exception e) {}
-//            }
-//        });
-//    }
-//       (   or another way display current time & date
-//       etdate = findViewById(R.id.TvTime);
-//
-//        Calendar c = Calendar.getInstance();
-//        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm ", Locale.getDefault());
-//        String  dateTime = sdf.format(c.getTime());
-//        etdate.setText(dateTime);)
 
     }
 
@@ -190,5 +148,54 @@ public class HomeLancher extends AppCompatActivity implements View.OnClickListen
 
     }
 }
+
+
+
+
+
+// Hide StatusBar & Navigation Bar..........
+// View windowDecorView = getWindow().getDecorView();
+// windowDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+//        Thread myThread = null;
+//        Runnable runnable = new CountDownRunner();
+//        myThread= new Thread(runnable);
+//        myThread.start();
+//    }
+//    class CountDownRunner implements Runnable{
+//        // @Override
+//        public void run() {
+//            while (!Thread.currentThread().isInterrupted()) {
+//                try {
+//                    doWork();
+//                    Thread.sleep(1000);
+//                } catch(InterruptedException e) {
+//                    Thread.currentThread().interrupt();
+//                } catch(Exception e) {
+//                }
+//            }
+//        }
+//    public void doWork() {
+//        runOnUiThread(new Runnable() {
+//            public void run() {
+//                try{
+//                    TextView txtCurrentTime= (TextView)findViewById(R.id.DtClock);
+//                    Date dt = new Date();
+//                    int hours = dt.getHours();
+//                    int minutes = dt.getMinutes();
+//                    int seconds = dt.getSeconds();
+//                    String curTime = hours + ":" + minutes + ":" + seconds;
+//                    txtCurrentTime.setText(curTime);
+//                }catch (Exception e) {}
+//            }
+//        });
+//    }
+//       (   or another way display current time & date
+//       etdate = findViewById(R.id.TvTime);
+//
+//        Calendar c = Calendar.getInstance();
+//        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm ", Locale.getDefault());
+//        String  dateTime = sdf.format(c.getTime());
+//        etdate.setText(dateTime);)
 
 

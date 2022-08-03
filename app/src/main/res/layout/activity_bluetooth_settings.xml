@@ -5,9 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Bluetooth_Settings">
+    <include
+        android:id="@+id/BluetoothStatusBar"
+        layout="@layout/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Switch
         android:id="@+id/BluetoothSwitch"
+        android:layout_below="@+id/BluetoothStatusBar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#8E8D8D"

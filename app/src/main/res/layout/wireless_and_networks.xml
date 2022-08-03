@@ -1,32 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="30dp">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp">
-    <Switch
-        android:id="@+id/AirplaneCheck"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+    >
+    <include
+        android:id="@+id/MoreStatusBar"
+        layout="@layout/status_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Airplane mode"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:padding="10dp"/>
+        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/textView9"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-  </LinearLayout>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/MoreStatusBar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/AirplaneCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:text="Airplane mode"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/MobileData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:text="cellular networks"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>
